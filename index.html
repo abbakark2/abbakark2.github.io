@@ -1,116 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abubakar M. Suleiman | PHP & Laravel Developer</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: #f8fafc;
-    }
-    .gradient-text {
-      background: linear-gradient(to right, #3b82f6, #06b6d4);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abubakar M. Suleiman | Full Stack Developer</title>
+    <meta name="description" content="Portfolio of Abubakar M. Suleiman, a Full Stack Developer and UI/UX Designer.">
+    <meta name="keywords" content="Abubakar Suleiman, Full Stack Developer, UI/UX Designer, Portfolio, Web Development">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <style>
+        :root {
+            --primary: #00b894;
+            --secondary: #0984e3;
+            --dark: #121212;
+            --light: #f5f6fa;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            scroll-behavior: smooth;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/bg-hero.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: var(--light);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .btn-custom {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            margin: 5px;
+            transition: 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .about img {
+            width: 200px;
+            border-radius: 50%;
+            border: 5px solid var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .skills .skill-badge {
+            background: var(--dark);
+            color: var(--light);
+            border: 2px solid var(--primary);
+            border-radius: 50px;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 0.9rem;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .skills .skill-badge:hover {
+            transform: scale(1.1);
+            background: var(--primary);
+        }
+
+        .projects img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .projects img:hover {
+            transform: scale(1.03);
+        }
+
+        footer {
+            background: #1e1e1e;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .social-icon {
+            margin: 0 10px;
+            color: var(--light);
+            font-size: 1.3rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: var(--primary);
+        }
+    </style>
 </head>
-<body class="overflow-x-hidden">
+<body>
+    <section class="hero">
+        <h1>Abubakar M. Suleiman</h1>
+        <p>Full Stack Developer & UI/UX Designer</p>
+        <div>
+            <a href="#contact" class="btn btn-custom">Get In Touch</a>
+            <a href="#projects" class="btn btn-outline-light rounded-pill">View My Work</a>
+        </div>
+    </section>
 
-  <!-- Hero Section -->
-  <section class="text-center py-20 px-4" data-aos="fade-down">
-    <h1 class="text-5xl font-extrabold gradient-text">Abubakar M. Suleiman</h1>
-    <p class="mt-4 text-xl">Senior PHP & Laravel Developer</p>
-    <p class="mt-2 text-gray-400">Damaturu, Yobe State, Nigeria • abbakark2@gmail.com • +2347030098120</p>
-  </section>
+    <section class="section text-center about">
+        <div class="container">
+            <h2 class="text-gradient display-5 mb-4">About Me & Core Skills</h2>
+            <img src="assets/sadik_portrait.png" alt="Abubakar M. Suleiman">
+            <p class="lead mt-3">To secure a challenging position as a Software Developer, where I can utilize my skills in web designing, Android application development, and standalone software development. I aspire to work with a dynamic team that will enable me to make a significant contribution to the organization and further my career.</p>
+            <p class="mt-3">I hold a B.Sc. in Computer Science from Yobe State University (Second Class Upper, 4.37 CGPA) and have professional experience building Laravel-based platforms, WordPress solutions, and Android applications.</p>
+            <div class="skills mt-5">
+                <span class="skill-badge">PHP</span>
+                <span class="skill-badge">Laravel</span>
+                <span class="skill-badge">JavaScript</span>
+                <span class="skill-badge">MySQL</span>
+                <span class="skill-badge">TailwindCSS</span>
+                <span class="skill-badge">REST APIs</span>
+                <span class="skill-badge">Firebase</span>
+                <span class="skill-badge">Git & GitHub</span>
+                <span class="skill-badge">WordPress</span>
+                <span class="skill-badge">Android Development</span>
+                <span class="skill-badge">Desktop Applications</span>
+                <span class="skill-badge">Windows Recovery</span>
+                <span class="skill-badge">Public Speaking</span>
+            </div>
+        </div>
+    </section>
 
-  <!-- About -->
-  <section class="max-w-4xl mx-auto px-4 py-10" data-aos="fade-right">
-    <h2 class="text-3xl font-bold mb-4 gradient-text">About Me</h2>
-    <p class="text-gray-300 leading-relaxed">
-      I am a dedicated and experienced Software Developer specializing in PHP and Laravel. With a strong academic background (B.Sc. Computer Science, 2:1) and industry experience in backend development, UI design, and software architecture, I lead the full development lifecycle of web applications and platforms.
-    </p>
-  </section>
+    <section class="section text-center">
+        <div class="container">
+            <h2 class="text-gradient display-5 mb-4">Experience</h2>
+            <p><strong>Senior Software Developer</strong> — ARMS IT Company Ltd (2025–Present)</p>
+            <p>Leading design and development of Laravel and WordPress platforms, mentoring junior devs, and resolving complex technical issues.</p>
 
-  <!-- Skills -->
-  <section class="max-w-4xl mx-auto px-4 py-10" data-aos="fade-left">
-    <h2 class="text-3xl font-bold mb-4 gradient-text">Core Skills</h2>
-    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-gray-300">
-      <span>PHP</span>
-      <span>Laravel</span>
-      <span>JavaScript</span>
-      <span>MySQL</span>
-      <span>TailwindCSS</span>
-      <span>REST APIs</span>
-      <span>Firebase</span>
-      <span>Git & GitHub</span>
-      <span>WordPress</span>
-    </div>
-  </section>
+            <p><strong>Program Analyst</strong> — University of Maiduguri (2020–Present)</p>
+            <p>Developed staff management software for the Faculty of Environmental Studies and trained staff in MS Office tools.</p>
 
-  <!-- Projects -->
-  <section class="max-w-6xl mx-auto px-4 py-10" data-aos="zoom-in">
-    <h2 class="text-3xl font-bold mb-6 gradient-text">Highlighted Projects</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-gray-800 p-6 rounded-xl card">
-        <h3 class="text-xl font-semibold">Faculty Staff Management System</h3>
-        <p class="text-gray-400 mt-2">Built for the University of Maiduguri using Laravel and MySQL. Features role-based access, attendance, and reporting.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-xl card">
-        <h3 class="text-xl font-semibold">Custom E-commerce Platform</h3>
-        <p class="text-gray-400 mt-2">WordPress site with custom ACF theme, tailored product visibility, and WooCommerce integrations.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-xl card">
-        <h3 class="text-xl font-semibold">Admin Backend for Ride-Hailing App</h3>
-        <p class="text-gray-400 mt-2">Laravel-based backend with Firebase authentication, payment gateways, and API throttling.</p>
-      </div>
-    </div>
-  </section>
+            <p><strong>M&E Officer</strong> — KABHUDA (2020–2021)</p>
+            <p>Implemented and tracked Peacebuilding Monitoring and Evaluation (M&E) plans.</p>
 
-  <!-- Experience -->
-  <section class="max-w-4xl mx-auto px-4 py-10" data-aos="fade-up">
-    <h2 class="text-3xl font-bold mb-4 gradient-text">Experience</h2>
-    <div class="space-y-4 text-gray-300">
-      <div>
-        <h3 class="font-semibold">Senior Software Developer – ARMS IT Company Ltd (2025 – Present)</h3>
-        <p>Led the development of Laravel projects, mentored junior developers, and implemented scalable systems.</p>
-      </div>
-      <div>
-        <h3 class="font-semibold">Program Analyst – University of Maiduguri (2020 – Present)</h3>
-        <p>Developed and maintained a complete faculty management solution.</p>
-      </div>
-      <div>
-        <h3 class="font-semibold">M&E Officer – KABHUDA (2020 – 2021)</h3>
-        <p>Implemented monitoring and evaluation systems for peacebuilding projects.</p>
-      </div>
-    </div>
-  </section>
+            <p><strong>Program Officer</strong> — COCOSOHDI (2019–2020)</p>
+            <p>Led education and CVE/GBV/peacebuilding efforts in North East Nigeria under the AENN Project.</p>
 
-  <!-- Contact -->
-  <section class="text-center py-12 px-4" data-aos="zoom-in-up">
-    <h2 class="text-3xl font-bold gradient-text mb-2">Get in Touch</h2>
-    <p class="text-gray-400 mb-4">Email: <a href="mailto:abbakark2@gmail.com" class="underline">abbakark2@gmail.com</a></p>
-    <a href="mailto:abbakark2@gmail.com" class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition">Send Email</a>
-  </section>
+            <p><strong>GDSC Lead</strong> — Yobe State University (2018–2019)</p>
+            <p>Promoted Google tools and trained students in community-driven software solutions.</p>
+        </div>
+    </section>
 
-  <footer class="text-center text-sm text-gray-500 py-6">
-    © 2025 Abubakar M. Suleiman. All rights reserved.
-  </footer>
+    <section class="section text-center projects" id="projects">
+        <div class="container">
+            <h2 class="text-gradient display-5 mb-5">Highlighted Projects</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <img src="https://via.placeholder.com/400x250?text=Faculty+Staff+Management" alt="Faculty Staff Management">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://via.placeholder.com/400x250?text=E-commerce+Platform" alt="E-commerce Platform">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://via.placeholder.com/400x250?text=Ride-Hailing+Admin" alt="Ride-Hailing Admin">
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <section class="section text-center">
+        <div class="container">
+            <h2 class="text-gradient display-5 mb-4">Certifications & Memberships</h2>
+            <p>Certified in Python, Java, JavaScript, jQuery, PHP, SQL, HTML, and Google Digital Marketing. Member of GDSC, SDGs, Facebook Developers Community, Yobe Tech Forum, NACOSS, and Free Code Camp.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="section text-center">
+        <div class="container">
+            <h2 class="text-gradient display-5 mb-4">Get in Touch</h2>
+            <p>Email: <a href="mailto:abbakark2@gmail.com">abbakark2@gmail.com</a></p>
+            <a href="mailto:abbakark2@gmail.com" class="btn btn-custom">Send Email</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Abubakar M. Suleiman. All rights reserved.</p>
+        <div>
+            <a href="https://linkedin.com/in/yourprofile" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/yourprofile" class="social-icon"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>
